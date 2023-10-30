@@ -7,8 +7,8 @@
 #define MOTOR_IN2 3  // Input 2 for motor A
 
 #define MOTOR_ENB 1  // Enable motor B
-#define MOTOR_IN3 4  // Input 1 for motor B
-#define MOTOR_IN4 5  // Input 2 for motor B
+#define MOTOR_IN3 5  // Input 1 for motor B
+#define MOTOR_IN4 4  // Input 2 for motor B
 
 void motor_setup() {
     // Configure GPIO pins for motor control as outputs
@@ -99,18 +99,18 @@ int main() {
     // Move motor B forward at a specified speed
     move_motor_b_forward(180);  // Adjust speed as needed
 
-    sleep_ms(1000);  // Keep the motors running forward for 1 second
+    sleep_ms(500);  // Keep the motors running forward for 1 second
 
     // Stop both motors
     stop();
 
     sleep_ms(1000);  // Pause for 1 second
 
-    // Turn the robot right at a specified speed
-    move_motor_a_forward(180);  // Adjust speed as needed
-    move_motor_b_forward(180 / 2);  // Adjust speed as needed
+    // Turn the robot left at a specified speed
+    move_motor_a_backward(180);  // Adjust speed as needed
+    move_motor_b_forward(180);  // Adjust speed as needed
 
-    sleep_ms(1000);  // Keep the robot turning right for 1 second
+    sleep_ms(500);  // Keep the robot turning right for 1 second
 
     // Stop both motors
     stop();
@@ -123,23 +123,23 @@ int main() {
     // Move motor B forward at a specified speed
     move_motor_b_forward(180);  // Adjust speed as needed
 
-    sleep_ms(1000);  // Keep the motors running forward for 1 second
+    sleep_ms(500);  // Keep the motors running forward for 1 second
 
     // Stop both motors
     stop();
 
     sleep_ms(1000);  // Pause for 1 second
 
-    // Turn the robot left at a specified speed
-    move_motor_a_forward(180 / 2);  // Adjust speed as needed
-    move_motor_b_forward(180);  // Adjust speed as needed
+    // Turn the robot right at a specified speed
+    move_motor_a_forward(180);  // Adjust speed as needed
+    move_motor_b_backward(180);  // Adjust speed as needed
 
-    sleep_ms(1000);  // Keep the robot turning left for 1 second
+    sleep_ms(500);  // Keep the robot turning left for 1 second
 
     // Stop both motors
     stop();
 
-    sleep_ms(1000);  // Pause for 1 second
+   sleep_ms(1000);  // Pause for 1 second
 
     // Move motor A backward at a specified speed
     move_motor_a_backward(150);  // Adjust speed as needed
@@ -147,7 +147,7 @@ int main() {
     // Move motor B backward at a specified speed
     move_motor_b_backward(150);  // Adjust speed as needed
 
-    sleep_ms(1000);  // Keep the motors running backward for 1 second
+    sleep_ms(500);  // Keep the motors running backward for 1 second
 
     // Stop both motors
     stop();
